@@ -1,5 +1,4 @@
 
-
 #include <iostream>
 #include <windows.h>
 #include <string.h>
@@ -77,6 +76,29 @@ int shell()
             cout << "Thanks for using my shell!\n";
             return 0;
         }
+        else if (string(cmd) == "color-table")
+        {
+            cout << "Syntax is  color <b><f> where  <b> is background and  <f> is foreground\n"; 
+            cout << "color table list\n";
+            cout << " ----------------------------\n";
+            cout << " |0          Black          |\n";
+            cout << " |1          Blue           |\n";
+            cout << " |2          Green          |\n";
+            cout << " |3          Aqua           |\n";
+            cout << " |4          Red            |\n";
+            cout << " |5          Purple         |\n";
+            cout << " |6          Yellow         |\n";
+            cout << " |7          White          |\n";
+            cout << " |8          Gray           |\n";
+            cout << " |9          Light blue     |\n";
+            cout << " |a          Light green    |\n";
+            cout << " |b          Light aqua     |\n";
+            cout << " |c          Light red      |\n";
+            cout << " |d          Light yellow   |\n";
+            cout << " |e          Light purple   |\n";
+            cout << " |f          Bright white   |\n";
+            cout << " ----------------------------\n";
+        }
         else
         {
             cout << "Invalid command, input from command list." << endl;
@@ -86,23 +108,25 @@ int shell()
 }
 void prompt()
 {
-
-    string command = "";
+   HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+  //  std::cout << "Default console color" << std::endl;
     cout << " \n Welome to my shell!\n\n";
 
     cout << " Windows commands\n";
-    cout << " ----------\n";
-    cout << " |dir     |\n";
-    cout << " |help    |\n";
-    cout << " |vol     |\n";
-    cout << " |path    |\n";
-    cout << " |tasklist|\n";
-    cout << " |notepad |\n";
-    cout << " |echo    |\n";
-    cout << " |color   |\n";
-    cout << " |ping    |\n";
-    cout << " |exit    |\n";
-    cout << " ---------\n";
+    cout << " ------------\n";
+    cout << " |dir        |\n";
+    cout << " |help       |\n";
+    cout << " |vol        |\n";
+    cout << " |path       |\n";
+    cout << " |tasklist   |\n";
+    cout << " |notepad    |\n";
+    cout << " |echo       |\n";
+    cout << " |color      |\n";
+    cout << " |color-table|\n";
+    cout << " |ping       |\n";
+    cout << " |exit       |\n";
+    cout << " -----------\n";
+
 }
 
 int main()
