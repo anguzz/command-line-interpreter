@@ -109,7 +109,6 @@ int shell()
 void prompt()
 {
    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-  //  std::cout << "Default console color" << std::endl;
     cout << " \n Welome to my shell!\n\n";
 
     cout << " Windows commands\n";
