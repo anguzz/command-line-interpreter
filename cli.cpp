@@ -36,7 +36,7 @@ void detectApple()
 #if __APPLE__
 #include "TargetConditionals.h"
 #if TARGET_OS_IPHONE && TARGET_IPHONE_SIMULATOR
-    printf("iPhone stimulator\n");
+    printf("iPhone simulator\n");
 #elif TARGET_OS_IPHONE
     printf("iPhone\n");
 #elif TARGET_OS_MAC
